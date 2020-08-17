@@ -3,11 +3,8 @@
   <p-table
     class="card"
     [value]="produtos"
-    [paginator]="true"
-    [rows]="5"
-    [showCurrentPageReport]="true"
-    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-    [rowsPerPageOptions]="[5, 10, 15]"
+    [scrollable]="true"
+    scrollHeight="300px"
   >
     <ng-template pTemplate="header">
       <tr>

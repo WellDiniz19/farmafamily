@@ -18,6 +18,6 @@ export class ProdutoDataComponent implements OnInit {
   }
 
   addProduto() {
-    this.router.navigate(['/cadastro']);
+    console.log('Navegando...');
   }
 }

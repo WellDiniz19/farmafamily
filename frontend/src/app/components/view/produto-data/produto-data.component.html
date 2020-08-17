@@ -14,13 +14,13 @@
     </ng-template>
     <ng-template pTemplate="body" let-product>
       <tr *ngFor="let produto of produtos">
-        <td>{{ book.id }}</td>
-        <td>{{ book.codigoErp }}</td>
-        <td>{{ book.apresentacao }}</td>
-        <td>{{ book.nomeComercial }}</td>
-        <td>{{ book.nomeComercialComApresentacao }}</td>
-        <td>{{ book.unidadeMedidaAnvisa }}</td>
-        <td>{{ book.codigoBarrasPrincipal }}</td>
+        <td>{{ produto.id }}</td>
+        <td>{{ produto.codigoErp }}</td>
+        <td>{{ produto.apresentacao }}</td>
+        <td>{{ produto.nomeComercial }}</td>
+        <td>{{ produto.nomeComercialComApresentacao }}</td>
+        <td>{{ produto.unidadeMedidaAnvisa }}</td>
+        <td>{{ produto.codigoBarrasPrincipal }}</td>
       </tr>
     </ng-template>
   </p-table>

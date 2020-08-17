@@ -14,7 +14,7 @@ export class ProdutoDataComponent implements OnInit {
   constructor(private produtoService: ProdutoService, private router: Router) {}
 
   ngOnInit() {
-    this.produtoService.getProdutos().subscribe();
+    this.produtoService.list().subscribe((dados) => (this.produtos = dados));
   }
 
   addProduto() {

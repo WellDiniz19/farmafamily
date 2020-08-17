@@ -1,11 +1,6 @@
 <br />
 <div class="card">
-  <p-table
-    [value]="produtos"
-    selectionMode="single"
-    [(selection)]="selecionarProduto"
-    dataKey="code"
-  >
+  <p-table [value]="produtos">
     <ng-template pTemplate="header">
       <tr>
         <th>ID</th>
@@ -17,8 +12,8 @@
         <th>Código Barras Pricipal</th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-produto>
-      <tr [pSelectableRow]="produto">
+    <ng-template pTemplate="body" let-product>
+      <tr *ngFor="let produto of produtos">
         <td>{{ book.id }}</td>
         <td>{{ book.codigoErp }}</td>
         <td>{{ book.apresentacao }}</td>

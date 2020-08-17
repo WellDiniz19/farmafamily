@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class ProdutoDataComponent implements OnInit {
   produtos: Produto[];
+  first = 0;
+  rows = 5;
   selecionarProduto: Produto;
   constructor(private produtoService: ProdutoService, private router: Router) {}
 

@@ -1,6 +1,14 @@
 <br />
-<div class="card">
-  <p-table [value]="produtos">
+<div class="container">
+  <p-table
+    class="card"
+    [value]="produtos"
+    [paginator]="true"
+    [rows]="5"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [rowsPerPageOptions]="[5, 10, 15]"
+  >
     <ng-template pTemplate="header">
       <tr>
         <th>ID</th>
@@ -22,6 +30,20 @@
         <td>{{ produto.unidadeMedidaAnvisa }}</td>
         <td>{{ produto.codigoBarrasPrincipal }}</td>
       </tr>
+    </ng-template>
+    <ng-template pTemplate="paginatorleft">
+      <p-button
+        type="button"
+        icon="pi pi-plus"
+        styleClass="p-button-text"
+      ></p-button>
+    </ng-template>
+    <ng-template pTemplate="paginatorright">
+      <p-button
+        type="button"
+        icon="pi pi-cloud"
+        styleClass="p-button-text"
+      ></p-button>
     </ng-template>
   </p-table>
 </div>

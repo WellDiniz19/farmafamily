@@ -1,0 +1,27 @@
+<div class="p-grid p-dir-col">
+  <div class="logo">
+    <img src="../../assets/img/farmaFamily.png" alt="FarmaFamily Logo" />
+  </div>
+  <h2>Bem-vindo de volta!</h2>
+
+  <span class="p-col-6 p-offset-3 p-float-label">
+    <input [(ngModel)]="usuario.nome" id="float-input" type="text" pInputText />
+    <label for="float-input">Usuário</label>
+  </span>
+
+  <span class="p-col-6 p-offset-3 p-float-label">
+    <input
+      [(ngModel)]="usuario.senha"
+      id="float-input"
+      type="password"
+      pPassword
+    />
+    <label for="float-input">Senha</label>
+  </span>
+
+  <p-button
+    class="buttonLogin"
+    label="Login"
+    (onClick)="fazerLogin()"
+  ></p-button>
+</div>
